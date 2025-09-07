@@ -419,7 +419,7 @@ const file_proto_user_proto_rawDesc = "" +
 	"\vUserService\x129\n" +
 	"\bRegister\x12\x15.user.RegisterRequest\x1a\x16.user.RegisterResponse\x120\n" +
 	"\x05Login\x12\x12.user.LoginRequest\x1a\x13.user.LoginResponse\x126\n" +
-	"\aGetUser\x12\x14.user.GetUserRequest\x1a\x15.user.GetUserResponseB!Z\x1fecommerce-platform/proto/userpbb\x06proto3"
+	"\aGetUser\x12\x14.user.GetUserRequest\x1a\x15.user.GetUserResponseB\x0eZ\fproto/userpbb\x06proto3"
 
 var (
 	file_proto_user_proto_rawDescOnce sync.Once

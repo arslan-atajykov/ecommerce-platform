@@ -1,7 +1,7 @@
 .PHONY: proto
 
 PROTO_DIR=./proto
-OUT_DIR=./proto/gen
+OUT_DIR=.
 
 proto:
 	mkdir -p $(OUT_DIR)
