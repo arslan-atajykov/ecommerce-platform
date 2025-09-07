@@ -1,0 +1,48 @@
+syntax = "proto3";
+
+package user;
+option go_package = "ecommerce-platform/proto/userpb";
+
+// User message
+message User {
+  string id = 1;
+  string email = 2;
+  string password = 3; // stored as hash
+  string name = 4;
+}
+
+// Request/Response messages
+message RegisterRequest {
+  string email = 1;
+  string password = 2;
+  string name = 3;
+}
+
+message RegisterResponse {
+  User user = 1;
+}
+
+message LoginRequest {
+  string email = 1;
+  string password = 2;
+}
+
+message LoginResponse {
+  string token = 1;
+  User user = 2;
+}
+
+message GetUserRequest {
+  string id = 1;
+}
+
+message GetUserResponse {
+  User user = 1;
+}
+
+// Service definition
+service UserService {
+  rpc Register(RegisterRequest) returns (RegisterResponse);
+  rpc Login(LoginRequest) returns (LoginResponse);
+  rpc GetUser(GetUserRequest) returns (GetUserResponse);
+}
